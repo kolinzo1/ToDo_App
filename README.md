@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Task Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is about developing a task management app that provides functionality to manage tasks and contacts.
 
-## Available Scripts
+## User stories
 
 In the project directory, you can run:
 
-### `npm start`
+### User Story 1: View and Manage Todos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As a user,I want to view all my todos in one place,so that I can keep track of my tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Acceptance Criteria:
 
-### `npm test`
+  - When I navigate to the "/todos" page, I see a list of all my current todos.
+  - Each todo should display its completion status, with completed todos visually distinguished (e.g., strike-through).
+  - There should be options to filter todos by "All", "Completed", and "Incomplete".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Story 2: Add New Todos
 
-### `npm run build`
+As a user,I want to add new todos to my list,so that I can keep track of new tasks I need to accomplish.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Acceptance Criteria:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - On the "/todos" page, there should be a form with a text input and an "Add Todo" button.
+  - When I enter a new task and click "Add Todo", the new task should immediately appear in the todo list.
+  - The form should clear after adding a todo, ready for the next entry.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### User Story 3: Toggle Todo Completion
 
-### `npm run eject`
+As a user,I want to mark todos as completed or incomplete,so that I can track my progress on tasks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Acceptance Criteria:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Each todo item should have a checkbox or similar interaction method to toggle its completion status.
+  - When I mark a todo as complete, it should visually indicate this (e.g., with a strike-through or color change).
+  - The change in status should be reflected immediately in the UI.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### User Story 4: Remove Todos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+As a user,I want to remove todos from my list,so that I can clean up my task list of completed or unnecessary tasks.
 
-## Learn More
+- Acceptance Criteria:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Each todo item should have a delete option (button or icon).
+  - When I choose to delete a todo, it should be immediately removed from the list without any confirmation (for simplicity; in a production app, you might want a confirmation dialog).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### User Story 5: Contact Us Feature
 
-### Code Splitting
+As a user,I want to have a way to contact the developers or provide feedback,so that I can report issues, suggest improvements, or get support.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Acceptance Criteria:
 
-### Analyzing the Bundle Size
+  - There should be a "/contact" page accessible from the navigation bar.
+  - The page should contain a form with fields for First Name, Last Name, Email, and Comments.
+  - The form should update as I type (controlled components), showing that my input is being captured.
+  - When I submit the form, there should be some feedback (like a message saying "Thank you for your feedback!"), although in a real scenario, this might involve actual email submission.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### User Story 6: Navigation Between Pages
 
-### Making a Progressive Web App
+As a user,I want to easily navigate between different sections of the app,so that I can switch between managing my tasks and contacting support effortlessly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Acceptance Criteria:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - A horizontal navigation bar should be present at the top of both pages.
+  - Links should be clearly labeled as "Todos" and "Contact".
+  - Clicking on these links should change the URL and load the appropriate page content without reloading the entire app.
