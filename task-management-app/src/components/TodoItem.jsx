@@ -9,7 +9,9 @@ const TodoItem = ({ todo, onToggleComplete, onDeleteTodo }) => {
         onChange={() => onToggleComplete(todo.id)}
       />
       <span>{todo.text}</span>
-      <button onClick={() => onDeleteTodo(todo.id)}>Delete</button>
+      <button className="delete-button" onClick={() => onDeleteTodo(todo.id)}>
+        Delete
+      </button>
     </div>
   );
 };
