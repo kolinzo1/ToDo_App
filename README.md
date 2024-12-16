@@ -67,3 +67,9 @@ As a user,I want to easily navigate between different sections of the app,so tha
   - Clicking on these links should change the URL and load the appropriate page content without reloading the entire app.
 
 ![App Link](https://kolinzo1.github.io/todos)
+
+## Installation Instructions
+
+To install the application, run the following command:
+
+npm install
